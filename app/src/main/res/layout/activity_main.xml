@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+
+    <ImageView
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:id="@+id/recipes_button"
+        android:src="@drawable/recipes_icon"
+        android:scaleType="fitCenter"
+        android:gravity="center"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="56dp"
+        android:layout_alignTop="@+id/calculator_button" />
+
+    <ImageView
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:id="@+id/calculator_button"
+        android:src="@drawable/calculator_icon"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/recipes_button"
+        android:layout_toEndOf="@+id/recipes_button"
+        android:layout_marginRight="44dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginTop="15dp" />
+
+    <ImageView
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:id="@+id/types_of_devices_button"
+        android:src="@drawable/types_of_devices_icon"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:gravity="center"
+        android:layout_below="@+id/recipes_button"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="37dp" />
+
+    <ImageView
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:id="@+id/sort_button"
+        android:src="@drawable/beans_sorts_icon"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_alignTop="@+id/types_of_devices_button"
+        android:layout_marginRight="44dp"
+        android:layout_marginLeft="46dp"
+        android:layout_toRightOf="@+id/types_of_devices_button" />
+
+    <ImageView
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:id="@+id/about_button"
+        android:src="@drawable/about_coffee_icon"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_below="@+id/types_of_devices_button"
+        android:layout_marginLeft="46dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="37dp" />
+
+    <ImageView
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:id="@+id/support_button"
+        android:src="@drawable/support_icon"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_marginRight="44dp"
+        android:layout_marginLeft="46dp"
+        android:layout_toRightOf="@+id/about_button"
+        android:layout_below="@+id/sort_button"
+        android:layout_alignTop="@+id/about_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/recipes"
+        android:id="@+id/textView"
+        android:textSize="@dimen/activity_types_name"
+        android:layout_alignRight="@+id/recipes_button"
+        android:layout_alignEnd="@+id/recipes_button"
+        android:layout_below="@+id/recipes_button"
+        android:layout_alignLeft="@+id/recipes_button"
+        android:layout_alignStart="@+id/recipes_button"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="false"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calculator"
+        android:id="@+id/textView2"
+        android:textSize="@dimen/activity_types_name"
+        android:layout_alignRight="@+id/calculator_button"
+        android:layout_alignEnd="@+id/calculator_button"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignLeft="@+id/calculator_button"
+        android:layout_alignStart="@+id/calculator_button"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sorts"
+        android:id="@+id/textView3"
+        android:textSize="@dimen/activity_types_name"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_alignLeft="@+id/sort_button"
+        android:layout_alignStart="@+id/sort_button"
+        android:layout_alignRight="@+id/sort_button"
+        android:layout_alignEnd="@+id/sort_button"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/devices"
+        android:id="@+id/textView4"
+        android:textSize="@dimen/activity_types_name"
+        android:layout_alignRight="@+id/types_of_devices_button"
+        android:layout_alignEnd="@+id/types_of_devices_button"
+        android:layout_below="@+id/types_of_devices_button"
+        android:gravity="center_horizontal"
+        android:layout_alignLeft="@+id/about_button"
+        android:layout_alignStart="@+id/about_button" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about"
+        android:id="@+id/textView5"
+        android:textSize="@dimen/activity_types_name"
+        android:layout_gravity="center"
+        android:lines="1"
+        android:layout_alignLeft="@+id/about_button"
+        android:layout_alignStart="@+id/about_button"
+        android:layout_below="@+id/about_button"
+        android:layout_alignRight="@+id/about_button"
+        android:layout_alignEnd="@+id/about_button"
+        android:gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/support"
+        android:id="@+id/textView6"
+        android:textSize="@dimen/activity_types_name"
+        android:layout_gravity="center"
+        android:lines="1"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignRight="@+id/support_button"
+        android:layout_alignEnd="@+id/support_button"
+        android:layout_alignBottom="@+id/textView5"
+        android:layout_alignLeft="@+id/support_button"
+        android:layout_alignStart="@+id/support_button"
+        android:gravity="center_horizontal" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme"  parent="Theme.AppCompat.Light">
+        <item name="colorPrimary">@color/toolbar</item>
+        <item name="colorPrimaryDark">#72021A</item>
+    </style>
+</resources>
