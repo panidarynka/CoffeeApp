@@ -3,7 +3,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/background">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:id="@+id/main_activity_content_frame"
+    android:layout_height="match_parent">
 
+</FrameLayout>
 
     <ImageView
         android:layout_width="@dimen/size_pic"

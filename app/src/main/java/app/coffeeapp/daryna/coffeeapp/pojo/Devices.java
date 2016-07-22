@@ -1,43 +1,68 @@
 package app.coffeeapp.daryna.coffeeapp.pojo;
 
-import com.parse.ParseClassName;
-import com.parse.ParseObject;
-
 /**
- * Created by Daryna on 23.08.2015.
+// * Created by Daryna on 23.08.2015.
  */
-@ParseClassName("Devices")
-public class Devices extends ParseObject {
 
-    public String getPicture() {
-        return getString("picture_string");
+public class Devices  {
+    public int _id;
+    public String name = "";
+    public String sdesc ="";
+    public String desc = "";
+
+
+
+    public String  pic_path = "";
+
+    public Devices(String name, String sdesc, String desc, String pic_path) {
+        //this._id=_id;
+        this.name=name;
+        this.sdesc=sdesc;
+        this.desc=desc;
+        this.pic_path=pic_path;
     }
 
-    public void setPicture(String picture_devices) {
-        put("picture_devices", picture_devices);
+    public Devices (){
+
+    }
+    public int get_id() {
+        return _id;
+    }
+
+    public void set_id(int _id) {
+        this._id = _id;
     }
 
     public String getName() {
-        return getString("name_devices");
+        return name;
     }
 
-    public void setName(String name_devices) {
-        put("name_devices", name_devices);
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getDescription_small() {
-        return getString("description_small_devices");
+    public String getSdesc() {
+        return sdesc;
     }
 
-    public void setDescription_small(String description_small_devices) {
-        put("description_small_devices", description_small_devices);
+    public void setSdesc(String sdesc) {
+        this.sdesc = sdesc;
     }
 
-    public String getDescription() {
-        return getString("description_devices");
+    public String getDesc() {
+        return desc;
     }
 
-    public void setDescription(String description_devices) {
-        put("description_devices", description_devices);
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
+
+    public String getPic_path() {
+        return pic_path;
+    }
+
+    public void setPic_path(String pic_path) {
+        this.pic_path = pic_path;
+    }
+
 }

@@ -1,7 +1,7 @@
 <resources>
-    <!-- Base application theme. -->
+    <!-- Base application theme #72021A. -->
     <style name="AppTheme"  parent="Theme.AppCompat.Light">
         <item name="colorPrimary">@color/toolbar</item>
-        <item name="colorPrimaryDark">#72021A</item>
+        <item name="colorPrimaryDark">#872e1b</item>
     </style>
 </resources>

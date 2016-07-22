@@ -1,10 +1,14 @@
 package app.coffeeapp.daryna.coffeeapp.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Typeface;
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -12,6 +16,9 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.IOException;
+
+import app.coffeeapp.daryna.coffeeapp.DB.DatabaseHelper;
 import app.coffeeapp.daryna.coffeeapp.R;
 
 public class MainActivity extends ActionBarActivity implements OnClickListener {
@@ -21,6 +28,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
     ImageView calc, devices, sopts, about, support, recipes;
     Typeface myTypeface;
     TextView tv, tv1, tv2, tv3, tv4, tv5;
+
 
 
     @Override
@@ -33,6 +41,8 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
         }
         initViews();
         setupViews();
+        DatabaseHelper dbhelper = new DatabaseHelper(getApplicationContext());
+            dbhelper.openDataBase();
         /*ActionBar bar = getActionBar();
         bar.setBackgroundDrawable(new ColorDrawable(Color.parseColor("#A13A22")));*/
     }

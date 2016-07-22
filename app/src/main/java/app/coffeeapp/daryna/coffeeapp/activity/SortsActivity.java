@@ -1,5 +1,6 @@
 package app.coffeeapp.daryna.coffeeapp.activity;
 
+import android.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,39 +8,38 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseQuery;
 
 import java.util.List;
 
 import app.coffeeapp.daryna.coffeeapp.R;
-
-import app.coffeeapp.daryna.coffeeapp.adapters.ListSortsAdapter;
-
-import app.coffeeapp.daryna.coffeeapp.pojo.Sorts;
+import app.coffeeapp.daryna.coffeeapp.fragments.SortsFragment;
 
 
-public class SortsActivity extends ActionBarActivity {
-
+public class SortsActivity extends ActionBarActivity implements SortsFragment.OnFragmentInteractionListener {
+    FragmentTransaction fTrans;
     private ListView list_view;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sopts);
-        list_view = (ListView) findViewById(R.id.listView);
-        ParseQuery<Sorts> query = new ParseQuery<>("Sorts");
-        query.findInBackground(new FindCallback<Sorts>() {
-            @Override
-            public void done(List<Sorts> sortses, ParseException e) {
-                if (e == null) {
-                    ListSortsAdapter adapter = new ListSortsAdapter(SortsActivity.this, R.layout.layout_list_item, sortses);
-                    list_view.setAdapter(adapter);
-                } else {
-                    Log.e("TAG1", e.getMessage(), e);
-                }
-            }
-        });
+        setContentView(R.layout.activity_devices);
+        fTrans = getFragmentManager().beginTransaction();
+        fTrans.add(R.id.fragmentd, new SortsFragment());
+        fTrans.addToBackStack(SortsFragment.class.getSimpleName());
+        fTrans.commit();
+//        fragmentListRecip
+//        ParseQuery<Sorts> query = new ParseQuery<>("Sorts");
+//        query.findInBackground(new FindCallback<Sorts>() {
+//            @Override
+//            public void done(List<Sorts> sortses, ParseException e) {
+//                if (e == null) {
+//                    ListSortsAdapter adapter = new ListSortsAdapter(SortsActivity.this, R.layout.layout_list_item, sortses);
+//                    list_view.setAdapter(adapter);
+//                } else {
+//                    Log.e("TAG1", e.getMessage(), e);
+//                }
+//            }
+//        });
     }
 
 
@@ -63,5 +63,10 @@ public class SortsActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onSortSelected(String recipeId) {
+
     }
 }

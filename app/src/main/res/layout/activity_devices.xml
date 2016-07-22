@@ -4,9 +4,11 @@
     android:layout_height="match_parent"
     tools:context="app.coffeeapp.daryna.coffeeapp.activity.DevicesActivity">
 
-    <ListView
-        android:id="@+id/listView"
+    <FrameLayout
+        android:id="@+id/fragmentd"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+    </FrameLayout>
 
 </RelativeLayout>

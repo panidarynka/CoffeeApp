@@ -7,17 +7,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseQuery;
-
 import java.util.List;
 
 import app.coffeeapp.daryna.coffeeapp.R;
-import app.coffeeapp.daryna.coffeeapp.adapters.ListAboutAdapter;
-import app.coffeeapp.daryna.coffeeapp.adapters.ListDevicesAdapter;
-import app.coffeeapp.daryna.coffeeapp.pojo.About;
-import app.coffeeapp.daryna.coffeeapp.pojo.Devices;
+
 
 
 public class AboutActivity extends ActionBarActivity {
@@ -28,18 +21,18 @@ public class AboutActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         list_view = (ListView) findViewById(R.id.listView);
-        ParseQuery<About> query = new ParseQuery<>("About");
-        query.findInBackground(new FindCallback<About>() {
-            @Override
-            public void done(List<About> abouts, ParseException e) {
-                if (e == null) {
-                    ListAboutAdapter adapter = new ListAboutAdapter(AboutActivity.this, R.layout.layout_list_item, abouts);
-                    list_view.setAdapter(adapter);
-                } else {
-                    Log.e("TAG1", e.getMessage(), e);
-                }
-            }
-        });
+//        ParseQuery<About> query = new ParseQuery<>("About");
+//        query.findInBackground(new FindCallback<About>() {
+//            @Override
+//            public void done(List<About> abouts, ParseException e) {
+//                if (e == null) {
+//                    ListAboutAdapter adapter = new ListAboutAdapter(AboutActivity.this, R.layout.layout_list_item, abouts);
+//                    list_view.setAdapter(adapter);
+//                } else {
+//                    Log.e("TAG1", e.getMessage(), e);
+//                }
+//            }
+//        });
     }
 
 

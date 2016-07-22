@@ -10,16 +10,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseQuery;
-
 import java.util.List;
 
 import app.coffeeapp.daryna.coffeeapp.R;
 import app.coffeeapp.daryna.coffeeapp.activity.RecipesActivity;
-import app.coffeeapp.daryna.coffeeapp.adapters.ListCoffeeAdapter;
-import app.coffeeapp.daryna.coffeeapp.pojo.Recipes;
 
 /**
  * Created by Daryna on 24.09.2015.
@@ -39,18 +33,18 @@ public class FragmentListRecipes extends Fragment implements AdapterView.OnItemC
         View view = inflater.inflate(R.layout.fragmentlist, null);
         list_view = (ListView) view.findViewById(R.id.listView);
         list_view.setOnItemClickListener(this);
-        ParseQuery<Recipes> query = new ParseQuery<>("Recipes");
-        query.findInBackground(new FindCallback<Recipes>() {
-            @Override
-            public void done(List<Recipes> recipeses, ParseException e) {
-                if (e == null) {
-                    ListCoffeeAdapter adapter = new ListCoffeeAdapter(getActivity(), R.layout.layout_list_item, recipeses);
-                    list_view.setAdapter(adapter);
-                } else {
-                    Log.e("TAG1", e.getMessage(), e);
-                }
-            }
-        });
+//        ParseQuery<Recipes> query = new ParseQuery<>("Recipes");
+//        query.findInBackground(new FindCallback<Recipes>() {
+//            @Override
+//            public void done(List<Recipes> recipeses, ParseException e) {
+//                if (e == null) {
+//                    ListCoffeeAdapter adapter = new ListCoffeeAdapter(getActivity(), R.layout.layout_list_item, recipeses);
+//                    list_view.setAdapter(adapter);
+//                } else {
+//                    Log.e("TAG1", e.getMessage(), e);
+//                }
+//            }
+//        });
 
         return view;
     }
@@ -74,9 +68,9 @@ public class FragmentListRecipes extends Fragment implements AdapterView.OnItemC
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        if (mListener != null) {
-            mListener.onRecipeSelected(((ListCoffeeAdapter) parent.getAdapter()).getItem(position).getObjectId());
-        }
+//        if (mListener != null) {
+//            mListener.onRecipeSelected(((ListCoffeeAdapter) parent.getAdapter()).getItem(position).getObjectId());
+//        }
     }
 
     public interface OnFragmentInteractionListener {

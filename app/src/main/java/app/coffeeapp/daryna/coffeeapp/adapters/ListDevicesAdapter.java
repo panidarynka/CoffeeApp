@@ -12,8 +12,8 @@ import android.widget.TextView;
 import java.util.List;
 
 import app.coffeeapp.daryna.coffeeapp.R;
+
 import app.coffeeapp.daryna.coffeeapp.pojo.Devices;
-import app.coffeeapp.daryna.coffeeapp.pojo.Sorts;
 import app.coffeeapp.daryna.coffeeapp.utils.Utils;
 
 /**
@@ -56,9 +56,9 @@ public class ListDevicesAdapter extends ArrayAdapter<Devices> {
         }
         Devices dDevices = getItem(position);
 
-        Utils.loadImage(dDevices.getPicture(), holder.ivIcon, parent.getWidth());
+        //Utils.loadImage(dDevices.getPicture(), holder.ivIcon, parent.getWidth());
         holder.tvName.setText(dDevices.getName());
-        holder.tvDescription.setText(dDevices.getDescription_small());
+        holder.tvDescription.setText(dDevices.getSdesc());
 
         return convertView;
     }

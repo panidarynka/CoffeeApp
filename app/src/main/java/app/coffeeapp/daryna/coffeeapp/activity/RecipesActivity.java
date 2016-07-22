@@ -10,17 +10,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseQuery;
 
 import java.util.List;
 
 import app.coffeeapp.daryna.coffeeapp.R;
-import app.coffeeapp.daryna.coffeeapp.adapters.ListCoffeeAdapter;
 import app.coffeeapp.daryna.coffeeapp.fragments.FragmentDetails;
 import app.coffeeapp.daryna.coffeeapp.fragments.FragmentListRecipes;
-import app.coffeeapp.daryna.coffeeapp.pojo.Recipes;
+
 
 
 public class RecipesActivity extends ActionBarActivity implements
