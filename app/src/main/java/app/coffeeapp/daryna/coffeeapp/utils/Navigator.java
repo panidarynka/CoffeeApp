@@ -64,13 +64,13 @@ public class Navigator {
 //                .addToBackStack(SortsFragment.class.getSimpleName())
 //                .commit();
 //    }
-    public void showSupportFragment(AppCompatActivity activity){
-        activity.getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.main_activity_content_frame, new SupportFragment())
-                .addToBackStack(SupportFragment.class.getSimpleName())
-                .commit();
-    }
+//    public void showSupportFragment(AppCompatActivity activity){
+//        activity.getSupportFragmentManager()
+//                .beginTransaction()
+//                .replace(R.id.main_activity_content_frame, new SupportFragment())
+//                .addToBackStack(SupportFragment.class.getSimpleName())
+//                .commit();
+//    }
 //    public void showDetailsFragment(AppCompatActivity activity){
 //        activity.getSupportFragmentManager()
 //                .beginTransaction()

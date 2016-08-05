@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:gravity="center"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+<ImageView
+    android:layout_width="@dimen/size_pic"
+    android:layout_height="@dimen/size_pic"
+    android:src="@drawable/about_coffee"
+    android:layout_margin="8dp"
+    android:id="@+id/bug"
+    android:clickable="true"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView1"
+        android:textSize="@dimen/activity_types_name"
+        android:text="Сообщить об ошибке"/>
+    <ImageView
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:src="@drawable/about_coffee"
+        android:layout_margin="8dp"
+        android:id="@+id/feedback"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="@dimen/activity_types_name"
+        android:text="Оставить отзыв"/>
+    <ImageView
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:src="@drawable/about_coffee"
+        android:layout_margin="8dp"
+        android:id="@+id/like"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textSize="@dimen/activity_types_name"
+        android:text="Оценить приложение"/>
+</LinearLayout>
