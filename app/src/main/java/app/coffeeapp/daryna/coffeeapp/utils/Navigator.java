@@ -3,7 +3,7 @@ package app.coffeeapp.daryna.coffeeapp.utils;
 import android.support.v7.app.AppCompatActivity;
 
 import app.coffeeapp.daryna.coffeeapp.R;
-import app.coffeeapp.daryna.coffeeapp.fragments.AboutFragment;
+
 import app.coffeeapp.daryna.coffeeapp.fragments.CalculetorFragment;
 import app.coffeeapp.daryna.coffeeapp.fragments.DevicesFragment;
 import app.coffeeapp.daryna.coffeeapp.fragments.FragmentDetails;
@@ -29,13 +29,13 @@ public class Navigator {
         }
         return mInstance;
     }
-    public void showAboutFragment(AppCompatActivity activity){
-        activity.getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.main_activity_content_frame, new AboutFragment())
-                .addToBackStack(AboutFragment.class.getSimpleName())
-                .commit();
-    }
+//    public void showAboutFragment(AppCompatActivity activity){
+//        activity.getSupportFragmentManager()
+//                .beginTransaction()
+//                .replace(R.id.main_activity_content_frame, new AboutFragment())
+//                .addToBackStack(AboutFragment.class.getSimpleName())
+//                .commit();
+//    }
     public void showCalculatorFragment(AppCompatActivity activity){
         activity.getSupportFragmentManager()
                 .beginTransaction()
