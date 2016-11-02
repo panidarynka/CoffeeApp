@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -9,55 +9,48 @@
     android:layout_height="match_parent">
 
 
-    <ImageView
-        android:layout_width="167dp"
-        android:layout_height="96dp"
-        app:srcCompat="@drawable/recipes_icon"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="0dp"
-        android:id="@+id/recipes_button" />
+    <TextView
+        android:text="@string/support"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="250dp"
+        android:id="@+id/textView6"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="@dimen/activity_types_name"
+        app:layout_constraintRight_toRightOf="@+id/support_button"
+        app:layout_constraintLeft_toLeftOf="@+id/support_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/support_button"
+        android:layout_alignStart="@+id/support_button"
+        android:layout_alignEnd="@+id/support_button"
+        android:layout_alignRight="@+id/support_button"/>
 
-    <ImageView
+    <TextView
+        android:text="@string/sorts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="101dp"
+        android:id="@+id/textView3"
+        android:gravity="center_vertical|center_horizontal"
+        android:textSize="@dimen/activity_types_name"
+        android:layout_below="@+id/sort_button"
+        android:layout_alignStart="@+id/sort_button"
+        android:layout_alignLeft="@+id/sort_button"
+        android:layout_alignRight="@+id/sort_button"
+        android:layout_alignEnd="@+id/sort_button" />
 
-        android:layout_width="169dp"
-        android:layout_height="96dp"
-        app:srcCompat="@drawable/types_of_devices_icon"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="206dp"
-        android:id="@+id/types_of_devices_button" />
-
-    <ImageView
-
-        android:layout_width="169dp"
-        app:srcCompat="@drawable/beans_sorts_icon"
-        tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="391dp"
-        android:id="@+id/sort_button"
-        android:layout_height="96dp" />
-
-    <ImageView
-        android:layout_width="166dp"
-        android:layout_height="96dp"
-        app:srcCompat="@drawable/calculator_icon"
-        tools:layout_editor_absoluteY="146dp"
-        tools:layout_editor_absoluteX="0dp"
-        android:id="@+id/calculator_button" />
-
-    <ImageView
-        android:layout_width="169dp"
-        android:layout_height="96dp"
-        app:srcCompat="@drawable/about_coffee_icon"
-        tools:layout_editor_absoluteY="146dp"
-        tools:layout_editor_absoluteX="205dp"
-        android:id="@+id/about_button" />
-
-    <ImageView
-        android:layout_width="169dp"
-        android:layout_height="96dp"
-        app:srcCompat="@drawable/support_icon"
-        tools:layout_editor_absoluteY="146dp"
-        tools:layout_editor_absoluteX="390dp"
-        android:id="@+id/support_button" />
+    <TextView
+        android:text="@string/devices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView4"
+        android:layout_below="@+id/types_of_devices_button"
+        android:textSize="@dimen/activity_types_name"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignLeft="@+id/types_of_devices_button"
+        android:layout_alignStart="@+id/types_of_devices_button"
+        android:layout_alignRight="@+id/types_of_devices_button"
+        android:layout_alignEnd="@+id/types_of_devices_button" />
 
     <TextView
         android:text="@string/calculator"
@@ -65,10 +58,86 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:textSize="@dimen/activity_types_name"
-        app:layout_constraintRight_toRightOf="@+id/calculator_button"
-        app:layout_constraintLeft_toLeftOf="@+id/calculator_button"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignStart="@+id/calculator_button"
+        android:layout_alignLeft="@+id/calculator_button"
+        android:layout_alignRight="@+id/calculator_button"
+        android:layout_alignEnd="@+id/calculator_button" />
+
+    <ImageView
+        android:layout_width="166dp"
+        android:layout_height="96dp"
+        app:srcCompat="@drawable/calculator_icon"
+        android:id="@+id/calculator_button"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp" />
+
+    <ImageView
+
+        android:layout_width="169dp"
+        android:layout_height="96dp"
+        app:srcCompat="@drawable/types_of_devices_icon"
+        android:id="@+id/types_of_devices_button"
+        android:layout_alignLeft="@+id/about_button"
+        android:layout_alignStart="@+id/about_button" />
+
+    <ImageView
+        android:layout_width="167dp"
+        android:layout_height="96dp"
+        app:srcCompat="@drawable/recipes_icon"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:id="@+id/recipes_button"
+        android:layout_alignRight="@+id/calculator_button"
+        android:layout_alignEnd="@+id/calculator_button" />
+
+    <TextView
+        android:text="@string/about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteY="250dp"
-        />
+        android:id="@+id/textView5"
+        android:textSize="@dimen/activity_types_name"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/about_button"
+        android:layout_alignStart="@+id/about_button"
+        android:layout_alignEnd="@+id/about_button"
+        android:layout_alignRight="@+id/about_button"
+        android:gravity="center_vertical|center_horizontal" />
+
+    <ImageView
+        android:layout_width="169dp"
+        android:layout_height="96dp"
+        app:srcCompat="@drawable/about_coffee_icon"
+        android:id="@+id/about_button"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
+        android:layout_above="@+id/textView5"
+        android:layout_toLeftOf="@+id/textView6"
+        android:layout_toStartOf="@+id/textView6" />
+
+    <ImageView
+
+        android:layout_width="169dp"
+        app:srcCompat="@drawable/beans_sorts_icon"
+        android:id="@+id/sort_button"
+        android:layout_height="96dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <ImageView
+        android:layout_width="169dp"
+        android:layout_height="96dp"
+        app:srcCompat="@drawable/support_icon"
+        android:id="@+id/support_button"
+        android:layout_above="@+id/textView6"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:text="@string/recipes"
@@ -77,47 +146,10 @@
         tools:layout_editor_absoluteY="101dp"
         android:id="@+id/textView"
         android:textSize="@dimen/activity_types_name"
-        app:layout_constraintRight_toRightOf="@+id/recipes_button"
-        app:layout_constraintLeft_toLeftOf="@+id/recipes_button" />
-
-    <TextView
-        android:text="@string/devices"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="101dp"
-        android:id="@+id/textView4"
-        app:layout_constraintRight_toRightOf="@+id/types_of_devices_button"
-        app:layout_constraintLeft_toLeftOf="@+id/types_of_devices_button"
-        android:textSize="@dimen/activity_types_name"
-        app:layout_constraintHorizontal_bias="0.4" />
-
-    <TextView
-        android:text="@string/about"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="250dp"
-        android:id="@+id/textView5"
-        app:layout_constraintRight_toRightOf="@+id/about_button"
-        app:layout_constraintLeft_toLeftOf="@+id/about_button"
-        android:textSize="@dimen/activity_types_name" />
-
-    <TextView
-        android:text="@string/sorts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="101dp"
-        android:id="@+id/textView3"
-        android:textSize="@dimen/activity_types_name"
-        app:layout_constraintRight_toRightOf="@+id/sort_button"
-        app:layout_constraintLeft_toLeftOf="@+id/sort_button" />
-
-    <TextView
-        android:text="@string/support"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteY="250dp"
-        android:id="@+id/textView6"
-        android:textSize="@dimen/activity_types_name"
-        app:layout_constraintRight_toRightOf="@+id/support_button"
-        app:layout_constraintLeft_toLeftOf="@+id/support_button" />
-</android.support.constraint.ConstraintLayout>
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/recipes_button"
+        android:layout_alignRight="@+id/recipes_button"
+        android:layout_alignEnd="@+id/recipes_button"
+        android:layout_alignLeft="@+id/recipes_button"
+        android:layout_alignStart="@+id/recipes_button" />
+</RelativeLayout>
