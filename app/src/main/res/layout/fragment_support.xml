@@ -7,7 +7,7 @@
 <ImageView
     android:layout_width="@dimen/size_pic"
     android:layout_height="@dimen/size_pic"
-    android:src="@drawable/about_coffee"
+    android:src="@drawable/bug_button2"
     android:layout_margin="8dp"
     android:id="@+id/bug"
     android:clickable="true"
@@ -21,7 +21,7 @@
     <ImageView
         android:layout_width="@dimen/size_pic"
         android:layout_height="@dimen/size_pic"
-        android:src="@drawable/about_coffee"
+        android:src="@drawable/feeedback_button"
         android:layout_margin="8dp"
         android:id="@+id/feedback"/>
     <TextView
@@ -33,7 +33,7 @@
     <ImageView
         android:layout_width="@dimen/size_pic"
         android:layout_height="@dimen/size_pic"
-        android:src="@drawable/about_coffee"
+        android:src="@drawable/star_button"
         android:layout_margin="8dp"
         android:id="@+id/like"/>
     <TextView
