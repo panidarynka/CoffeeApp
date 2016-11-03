@@ -65,7 +65,7 @@
             android:src="@drawable/star_button"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="8dp"
-            android:id="@+id/like"/>
+            android:id="@+id/star"/>
 
         <TextView
             android:gravity="center_horizontal"

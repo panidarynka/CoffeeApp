@@ -33,19 +33,6 @@ public class FragmentListRecipes extends Fragment implements AdapterView.OnItemC
         View view = inflater.inflate(R.layout.fragmentlist, null);
         list_view = (ListView) view.findViewById(R.id.listView);
         list_view.setOnItemClickListener(this);
-//        ParseQuery<Recipes> query = new ParseQuery<>("Recipes");
-//        query.findInBackground(new FindCallback<Recipes>() {
-//            @Override
-//            public void done(List<Recipes> recipeses, ParseException e) {
-//                if (e == null) {
-//                    ListCoffeeAdapter adapter = new ListCoffeeAdapter(getActivity(), R.layout.layout_list_item, recipeses);
-//                    list_view.setAdapter(adapter);
-//                } else {
-//                    Log.e("TAG1", e.getMessage(), e);
-//                }
-//            }
-//        });
-
         return view;
     }
 

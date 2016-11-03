@@ -24,7 +24,7 @@ public class DevicesActivity extends ActionBarActivity implements DevicesFragmen
         setContentView(R.layout.activity_devices);
         fTrans = getFragmentManager().beginTransaction();
         fTrans.add(R.id.fragmentd, new DevicesFragment());
-        fTrans.addToBackStack(DevicesFragment.class.getSimpleName());
+        //fTrans.addToBackStack(DevicesFragment.class.getSimpleName());
         fTrans.commit();
 //        fragmentListRecipes = new FragmentListRecipes();
 //        fTrans = getFragmentManager().beginTransaction();

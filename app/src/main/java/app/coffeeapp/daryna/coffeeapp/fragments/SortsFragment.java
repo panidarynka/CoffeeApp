@@ -1,6 +1,5 @@
 package app.coffeeapp.daryna.coffeeapp.fragments;
 
-import android.app.Activity;
 import android.app.FragmentTransaction;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -60,17 +59,17 @@ public class SortsFragment extends Fragment implements AdapterView.OnItemClickLi
 
         return view;
     }
-
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (OnFragmentInteractionListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnFragmentInteractionListener");
-        }
-    }
+//
+//    @Override
+//    public void onAttach(Activity activity) {
+//        super.onAttach(activity);
+//        try {
+//            mListener = (OnFragmentInteractionListener) activity;
+//        } catch (ClassCastException e) {
+//            throw new ClassCastException(activity.toString()
+//                    + " must implement OnFragmentInteractionListener");
+//        }
+//    }
 
     @Override
     public void onDetach() {
@@ -91,7 +90,7 @@ public class SortsFragment extends Fragment implements AdapterView.OnItemClickLi
         details.setArguments(bundle);
         FragmentTransaction fTrans = getFragmentManager().beginTransaction();
         fTrans.replace(R.id.fragmentd, details);
-        fTrans.addToBackStack(DevicesFragment.class.getSimpleName());
+        fTrans.addToBackStack(FragmentDetails.class.getSimpleName());
         fTrans.commit();
     }
 
