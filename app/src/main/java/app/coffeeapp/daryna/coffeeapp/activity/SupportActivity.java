@@ -18,7 +18,6 @@ public FragmentTransaction fTrans;
         setContentView(R.layout.activity_support);
         fTrans = getFragmentManager().beginTransaction();
         fTrans.add(R.id.fragment, new SupportFragment());
-        fTrans.addToBackStack(SupportFragment.class.getSimpleName());
         fTrans.commit();
     }
 
