@@ -1,45 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@color/background"
-    android:layout_height="match_parent">
-<ImageView
-    android:layout_width="@dimen/size_pic"
-    android:layout_height="@dimen/size_pic"
-    android:src="@drawable/bug_button2"
-    android:layout_margin="8dp"
-    android:id="@+id/bug"
-    android:clickable="true"
-    />
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:background="@drawable/shadow"
+        android:elevation="8dp"
+        android:id="@+id/bug"
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:layout_margin="8dp"
+        android:clickable="true"
+        android:src="@drawable/bug_button2" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/textView1"
-        android:textSize="@dimen/activity_types_name"
-        android:text="Сообщить об ошибке"/>
-    <ImageView
-        android:layout_width="@dimen/size_pic"
-        android:layout_height="@dimen/size_pic"
-        android:src="@drawable/feeedback_button"
-        android:layout_margin="8dp"
-        android:id="@+id/feedback"/>
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Сообщить об ошибке"
+        android:textSize="@dimen/activity_types_name" />
+
+    <ImageView
+        android:background="@drawable/shadow"
+        android:elevation="8dp"
+        android:id="@+id/feedback"
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:layout_margin="8dp"
+        android:src="@drawable/feeedback_button" />
+
+    <TextView
         android:id="@+id/textView2"
-        android:textSize="@dimen/activity_types_name"
-        android:text="Оставить отзыв"/>
-    <ImageView
-        android:layout_width="@dimen/size_pic"
-        android:layout_height="@dimen/size_pic"
-        android:src="@drawable/star_button"
-        android:layout_margin="8dp"
-        android:id="@+id/star"/>
-    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Оставить отзыв"
+        android:textSize="@dimen/activity_types_name" />
+
+    <ImageView
+        android:background="@drawable/shadow"
+        android:elevation="8dp"
+        android:id="@+id/star"
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:layout_margin="8dp"
+        android:src="@drawable/star_button" />
+
+    <TextView
         android:id="@+id/textView3"
-        android:textSize="@dimen/activity_types_name"
-        android:text="Оценить приложение"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Оценить приложение"
+        android:textSize="@dimen/activity_types_name" />
 </LinearLayout>

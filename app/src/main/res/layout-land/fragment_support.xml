@@ -13,6 +13,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_width="@dimen/size_pic"
             android:layout_height="@dimen/size_pic"
+            android:background="@drawable/shadow"
+            android:elevation="8dp"
             android:src="@drawable/bug_button2"
             android:id="@+id/bug"
             android:layout_marginBottom="8dp"
@@ -38,6 +40,8 @@
     <ImageView
         android:layout_width="@dimen/size_pic"
         android:layout_height="@dimen/size_pic"
+        android:background="@drawable/shadow"
+        android:elevation="8dp"
         android:layout_gravity="center_horizontal"
         android:src="@drawable/feeedback_button"
         android:layout_marginBottom="8dp"
@@ -62,6 +66,8 @@
         <ImageView
             android:layout_width="@dimen/size_pic"
             android:layout_height="@dimen/size_pic"
+            android:background="@drawable/shadow"
+            android:elevation="8dp"
             android:src="@drawable/star_button"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="8dp"
