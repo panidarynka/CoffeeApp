@@ -45,17 +45,13 @@ public class SupportFragment extends Fragment {
             public void onClick(View v) {
                 switch (v.getId()){
                     case R.id.bug:
-                        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                        emailIntent.setData(Uri.parse("mailto:"));
-                        emailIntent.setType("message/rfc822");
-                        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] { "panidarynka@gmail.com" });
-                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Report bug in CoffeeApplication");
-                        try {
-                            startActivity(Intent.createChooser(emailIntent, "Choose an email client from..."));
-                        } catch (android.content.ActivityNotFoundException ex) {
-                            Toast.makeText(getActivity().getApplicationContext(), "No email client installed.",
-                                    Toast.LENGTH_LONG).show();
-                        }
+                        Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
+                        intent.setType("text/plain");
+                        intent.putExtra(Intent.EXTRA_SUBJECT, "Report bug from CoffeeApplication");
+                        //intent.putExtra(Intent.EXTRA_TEXT, "Body of email");
+                        intent.setData(Uri.parse("mailto:panidarynka@gmail.com")); // or just "mailto:" for blank
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
+                        startActivity(intent);
                         break;
 //                        Toast.makeText(getActivity().getApplicationContext(), "button was pressed", Toast.LENGTH_SHORT).show();
                     case R.id.feedback:
