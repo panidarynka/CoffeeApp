@@ -34,7 +34,7 @@ public class SupportFragment extends Fragment {
         tv3 = (TextView)view.findViewById(R.id.textView3);
         bug = (ImageView)view.findViewById(R.id.bug);
         feedback = (ImageView)view.findViewById(R.id.feedback);
-        like = (ImageView)view.findViewById(R.id.like);
+        like = (ImageView)view.findViewById(R.id.star);
 
         tv1.setTypeface(myTypeface);
         tv2.setTypeface(myTypeface);
@@ -45,22 +45,21 @@ public class SupportFragment extends Fragment {
             public void onClick(View v) {
                 switch (v.getId()){
                     case R.id.bug:
-                        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                        emailIntent.setData(Uri.parse("mailto:"));
-                        emailIntent.setType("message/rfc822");
-                        emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] { "panidarynka@gmail.com" });
-                        emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Report bug in Coffee App");
-                        try {
-                            startActivity(Intent.createChooser(emailIntent, "Choose an email client from..."));
-                        } catch (android.content.ActivityNotFoundException ex) {
-                            Toast.makeText(getActivity().getApplicationContext(), "No email client installed.",
-                                    Toast.LENGTH_LONG).show();
-                        }
-
-
-                        Toast.makeText(getActivity().getApplicationContext(), "button was pressed", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(Intent.ACTION_SENDTO); // it's not ACTION_SEND
+                        intent.setType("text/plain");
+                        intent.putExtra(Intent.EXTRA_SUBJECT, "Report bug from CoffeeApplication");
+                        //intent.putExtra(Intent.EXTRA_TEXT, "Body of email");
+                        intent.setData(Uri.parse("mailto:panidarynka@gmail.com")); // or just "mailto:" for blank
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // this will make such that when user returns to your app, your app is displayed, instead of the email app.
+                        startActivity(intent);
+                        break;
+//                        Toast.makeText(getActivity().getApplicationContext(), "button was pressed", Toast.LENGTH_SHORT).show();
                     case R.id.feedback:
                         Toast.makeText(getActivity().getApplicationContext(), "feedback was pressed", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.star:
+                        Toast.makeText(getActivity().getApplicationContext(), "star was pressed", Toast.LENGTH_SHORT).show();
+                        break;
                 }
 
             }

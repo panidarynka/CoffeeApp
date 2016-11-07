@@ -18,7 +18,7 @@ import app.coffeeapp.daryna.coffeeapp.pojo.About;
 
 
 public class AboutActivity extends ActionBarActivity {
-private String about;
+    private String about;
     TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ private String about;
         SQLiteDatabase db = databaseHelper.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM About", null);
         if (cursor!=null && cursor.moveToFirst()){
-              about = cursor.getString(1);
+            about = cursor.getString(1);
         }
         textView.setText(about);
 

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_gravity="center_horizontal"
+            android:layout_width="@dimen/size_pic"
+            android:layout_height="@dimen/size_pic"
+            android:background="@drawable/shadow"
+            android:elevation="8dp"
+            android:src="@drawable/bug_button2"
+            android:id="@+id/bug"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/activity_types_name"
+            android:text="Сообщить об ошибке"/>
+    </LinearLayout>
+
+
+<LinearLayout
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_width="@dimen/size_pic"
+        android:layout_height="@dimen/size_pic"
+        android:background="@drawable/shadow"
+        android:elevation="8dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/feeedback_button"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/feedback"/>
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textSize="@dimen/activity_types_name"
+        android:text="Оставить отзыв"/>
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="@dimen/size_pic"
+            android:layout_height="@dimen/size_pic"
+            android:background="@drawable/shadow"
+            android:elevation="8dp"
+            android:src="@drawable/star_button"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/star"/>
+
+        <TextView
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/activity_types_name"
+            android:text="Оценить приложение"/>
+    </LinearLayout>
+
+</LinearLayout>

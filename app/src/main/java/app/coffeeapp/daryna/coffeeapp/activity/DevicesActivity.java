@@ -24,7 +24,7 @@ public class DevicesActivity extends ActionBarActivity implements DevicesFragmen
         setContentView(R.layout.activity_devices);
         fTrans = getFragmentManager().beginTransaction();
         fTrans.add(R.id.fragmentd, new DevicesFragment());
-        fTrans.addToBackStack(DevicesFragment.class.getSimpleName());
+        //fTrans.addToBackStack(DevicesFragment.class.getSimpleName());
         fTrans.commit();
 //        fragmentListRecipes = new FragmentListRecipes();
 //        fTrans = getFragmentManager().beginTransaction();
@@ -42,29 +42,6 @@ public class DevicesActivity extends ActionBarActivity implements DevicesFragmen
 //                }
 //            }
 //        });
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_devices, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
