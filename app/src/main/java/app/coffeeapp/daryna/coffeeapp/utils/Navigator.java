@@ -50,13 +50,13 @@ public class Navigator {
 //                .addToBackStack(DevicesFragment.class.getSimpleName())
 //                .commit();
 //    }
-    public void showRecipesFragment(AppCompatActivity activity){
-        activity.getSupportFragmentManager()
-                .beginTransaction()
-                .replace(R.id.main_activity_content_frame, new RecipesFragment())
-                .addToBackStack(RecipesFragment.class.getSimpleName())
-                .commit();
-    }
+//    public void showRecipesFragment(AppCompatActivity activity){
+//        activity.getSupportFragmentManager()
+//                .beginTransaction()
+//                .replace(R.id.main_activity_content_frame, new RecipesFragment())
+//                .addToBackStack(RecipesFragment.class.getSimpleName())
+//                .commit();
+//    }
 //    public void showSortsFragment(AppCompatActivity activity){
 //        activity.getSupportFragmentManager()
 //                .beginTransaction()

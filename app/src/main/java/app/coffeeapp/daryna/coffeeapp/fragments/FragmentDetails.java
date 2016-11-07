@@ -9,6 +9,7 @@ import android.database.DataSetObserver;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,9 +34,11 @@ public class FragmentDetails extends Fragment {
         desc = (TextView)view.findViewById(R.id.description);
         picture = (ImageView)view.findViewById(R.id.picture);
         Bundle bundle = getArguments();
+        Log.d("bundle", bundle.getString("KEY_TABLE", "no table"));
         if(bundle != null) {
             detail = bundle.getString("KEY_DETAIL", "no argument pass");
             table = bundle.getString("KEY_TABLE", "no table");
+            Log.d("table", table);
             name.setText(detail);
         }
         DatabaseHelper dbhelper = new DatabaseHelper(getActivity().getApplicationContext());
@@ -47,15 +50,6 @@ public class FragmentDetails extends Fragment {
                     desc.setText(devices.getDesc());
                     int id = getResources().getIdentifier(devices.getPic_path(), null, null);
                     picture.setImageResource(id);
-//            Devices devices = new Devices(cursor.getInt(0),cursor.getString(1), cursor.getString(2), cursor.getString(3));
-
-
-//            while (cursor.isAfterLast() == false) {
-//
-//
-//                //            cursor.close();
-////            db.close();
-//            }
         }
 
         return view;

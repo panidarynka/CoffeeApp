@@ -61,9 +61,6 @@ public class RecipesActivity extends ActionBarActivity implements
 
     @Override
     public void onRecipeSelected(String recipeId) {
-        fragmentDetails = new FragmentDetails();
-        fTrans = getFragmentManager().beginTransaction();
-        fTrans.replace(R.id.fragment, fragmentDetails);
-        fTrans.commit();
+
     }
 }
