@@ -3,5 +3,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="activity_types_name">24dp</dimen>
-    <dimen name="size_pic">120dp</dimen>
+    <dimen name="size_pic">130dp</dimen>
+    <dimen name="margin_top_bottom_icon">47dp</dimen>
 </resources>

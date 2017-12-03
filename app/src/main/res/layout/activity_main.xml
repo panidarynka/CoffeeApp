@@ -20,7 +20,7 @@
         android:background="@drawable/shadow"
         android:elevation="8dp"
         android:layout_marginLeft="46dp"
-        android:layout_marginStart="56dp"
+        android:layout_marginStart="76dp"
         android:layout_alignTop="@+id/calculator_button" />
 
     <ImageView
@@ -34,9 +34,9 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/recipes_button"
         android:layout_toEndOf="@+id/recipes_button"
-        android:layout_marginRight="44dp"
-        android:layout_marginLeft="46dp"
-        android:layout_marginTop="15dp" />
+        android:layout_marginRight="34dp"
+        android:layout_marginLeft="56dp"
+        android:layout_marginTop="25dp" />
 
     <ImageView
         android:layout_width="@dimen/size_pic"
@@ -49,8 +49,8 @@
         android:gravity="center"
         android:layout_below="@+id/recipes_button"
         android:layout_marginLeft="46dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="37dp" />
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="@dimen/margin_top_bottom_icon" />
 
     <ImageView
         android:layout_width="@dimen/size_pic"
@@ -61,8 +61,8 @@
         android:background="@drawable/shadow"
         android:elevation="8dp"
         android:layout_alignTop="@+id/types_of_devices_button"
-        android:layout_marginRight="44dp"
-        android:layout_marginLeft="46dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginLeft="56dp"
         android:layout_toRightOf="@+id/types_of_devices_button" />
 
     <ImageView
@@ -75,8 +75,8 @@
         android:elevation="8dp"
         android:layout_below="@+id/types_of_devices_button"
         android:layout_marginLeft="46dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="37dp" />
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="@dimen/margin_top_bottom_icon" />
 
     <ImageView
         android:layout_width="@dimen/size_pic"
@@ -86,8 +86,8 @@
         android:scaleType="fitCenter"
         android:background="@drawable/shadow"
         android:elevation="8dp"
-        android:layout_marginRight="44dp"
-        android:layout_marginLeft="46dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginLeft="56dp"
         android:layout_toRightOf="@+id/about_button"
         android:layout_below="@+id/sort_button"
         android:layout_alignTop="@+id/about_button" />

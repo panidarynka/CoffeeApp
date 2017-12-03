@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.coffeeapp.daryna.coffeeapp.activity.DevicesActivity">
+    tools:context="app.coffeeapp.daryna.coffeeguide.activity.DevicesActivity">
 
     <FrameLayout
         android:id="@+id/fragmentd"

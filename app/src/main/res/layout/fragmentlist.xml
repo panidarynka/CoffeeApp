@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="app.coffeeapp.daryna.coffeeapp.fragments.FragmentListRecipes">
+    tools:context="app.coffeeapp.daryna.coffeeguide.fragments.FragmentListRecipes">
     <ListView
         android:id="@+id/listView"
         android:background="@color/background"

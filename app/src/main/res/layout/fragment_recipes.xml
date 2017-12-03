@@ -38,14 +38,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Приготовление: "/>
-            <app.coffeeapp.daryna.coffeeapp.utils.CustomList
+            <app.coffeeapp.daryna.coffeeguide.utils.CustomList
                 android:id="@+id/elements"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:divider="@null"
                 android:dividerHeight="0dp"
-                android:listSelector="@android:color/transparent"></app.coffeeapp.daryna.coffeeapp.utils.CustomList>
+                android:listSelector="@android:color/transparent"></app.coffeeapp.daryna.coffeeguide.utils.CustomList>
         </LinearLayout>
     </ScrollView>
 
